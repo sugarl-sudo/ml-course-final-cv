@@ -15,7 +15,7 @@ def upload_video():
     if "video" not in request.files:
         return {"message": "No video file provided"}, 400
     video = request.files["video"]
-    video_path = os.path.join("data/video/", video.filename)
+    video_path = os.path.join("/app/data/video/", video.filename)
     video.save(video_path)
     # ここで異常検出処理を行う
     # result = detect_anomalies(video_path)
