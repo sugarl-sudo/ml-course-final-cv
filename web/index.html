@@ -9,7 +9,10 @@
 <body>
     <h1>Welcome to the Web App!</h1>
     <div id="api-response"></div>
-
+    <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" id="video-file" name="video" accept="video/*">
+        <button type="submit">Upload Video</button>
+    </form>
     <script src="app.js"></script>
 </body>
 </html>
