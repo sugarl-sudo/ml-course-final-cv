@@ -8,4 +8,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
+RUN apt -y update && apt -y upgrade
+RUN apt -y install libopencv-dev
+
 CMD ["python", "app.py"]
