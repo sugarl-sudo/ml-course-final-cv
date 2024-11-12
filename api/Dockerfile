@@ -9,6 +9,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 RUN apt -y update && apt -y upgrade
-RUN apt -y install libopencv-dev
+RUN apt -y install libopencv-dev \
+    && apt-get install -y cmake build-essential libprotobuf-dev protobuf-compiler 
 
 CMD ["python", "app.py"]
